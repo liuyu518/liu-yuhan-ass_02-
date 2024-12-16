@@ -1,0 +1,35 @@
+# TODO: Create your Kivy layout in the kv language here
+BoxLayout:
+    orientation: 'horizontal'
+
+    BoxLayout:
+        orientation: 'vertical'
+        Button:
+            text: 'Sort by:'
+            size_hint: (1,None)
+            height: 44
+            on_release: app.sort_dropdown.open
+        TextInput:
+            hint_text: 'Title'
+        TextInput:
+            hint_text: 'Artist'
+        TextInput:
+            hint_text: 'Year'
+        Button:
+            text: 'Add Song'
+            on_release: app.clear_fields
+
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            id: status_label_top
+        ScrollView:
+            do_scroll_x: False
+            BoxLayout:
+                id: song_buttons_box
+                orientation: 'vertical'
+                size_hint_y: None
+                height: self.minimum_height
+        Label:
+            id. status_label_bottom
+
